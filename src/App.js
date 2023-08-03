@@ -6,11 +6,7 @@ function App() {
   const[number,setNumber]=useState("")
 
   const onbtnclick=(e)=>{
-    try{
-      setNumber(number.concat(e.target.name))
-    }catch(err){
-      setNumber("err")
-    }
+      setNumber(number.concat(e.target.name)) 
   } 
 
   const clear = ()=>{
@@ -18,17 +14,12 @@ function App() {
   }
 
   const remove = ()=>{
-    try{
       setNumber(number.slice(0,-1))
-    }catch(err){
-      setNumber("err")
-    }
   }
 
   const total=()=>{
     try{
-
-      setNumber(eval(number))
+      setNumber(eval(number).toString())
     }catch(err){
       setNumber("err")
     }
